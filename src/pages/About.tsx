@@ -1,42 +1,53 @@
-import { Shield, Zap, Handshake } from 'lucide-react';
+import { Rocket, Car, Cloud, Compass, Scan, Eye, Layers } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ContactFloat from '@/components/ContactFloat';
 import aboutImg from '../../picture/空中.jpg';
 
-const milestones = [
+const productTiers = [
   {
-    year: '2024',
-    title: '公司成立',
-    description: '北京祥云圣火航空科技有限公司正式成立，精准卡位低空经济国家战略风口，锚定无人机反制与低空安全赛道。',
+    icon: <Rocket size={36} />,
+    title: '空中巡查层',
+    subtitle: '无人机系统',
+    desc: '大范围巡查、航线自主飞行、热成像检测，实现广覆盖与高效率。',
+    color: 'from-blue-600 to-blue-700',
   },
   {
-    year: '2025',
-    title: '核心突破',
-    description: '核心团队组建完毕，攻克"探测-识别-反制"一体化底层算法，完成 1.0 版本产品定型，通过军工级可靠性测试。',
+    icon: <Car size={36} />,
+    title: '地面巡检层',
+    subtitle: '智能无人车',
+    desc: '路径自主导航、近距离精细检测，补足高空视觉盲区，实现高精度作业。',
+    color: 'from-red-600 to-red-700',
   },
   {
-    year: '2026',
-    title: '生态扩展',
-    description: '开启全国试点部署，承接区域级与集团级项目，建立稳定客户池，深化低空安防生态扩展与行业标准共建。',
+    icon: <Cloud size={36} />,
+    title: '云端管理层',
+    subtitle: '统一管理平台',
+    desc: '统一设备管控、智能任务调度、AI模型分析，驱动巡检流程自动化与数字化。',
+    color: 'from-[#1a365d] to-blue-800',
   },
 ];
 
-const coreFeatures = [
+const techCards = [
   {
-    icon: <Shield size={32} />,
-    title: '低空安全防护',
-    desc: '深耕无人机制控制、低空目标管控及智能安防技术研发，以自主创新为驱动，致力于构建覆盖监测预警、干扰处置、数据协同的全链条解决方案。',
+    icon: <Compass size={28} />,
+    title: '自主导航与SLAM',
+    desc: '实现无人机与巡检车的自主高精度定位与路径规划，降低人工干预。',
   },
   {
-    icon: <Zap size={32} />,
-    title: '智能空地协同',
-    desc: '依托行业领先的算法优化与硬件集成能力，实现无人机与无人车的无缝联动与一体化智能巡检调度。',
+    icon: <Scan size={28} />,
+    title: '多传感器融合',
+    desc: '集成激光雷达、热成像、RGB相机、IMU及GNSS，大幅增强复杂环境适应性。',
   },
   {
-    icon: <Handshake size={32} />,
-    title: '全流程技术服务',
-    desc: '坚持以客户需求为导向，提供从方案设计到落地实施的全流程服务，为公共安全、工业巡检等领域提供高效可靠的技术支撑。',
+    icon: <Eye size={28} />,
+    title: 'AI视觉识别',
+    desc: '基于深度学习的目标检测，自动识别现场设备异常与故障，实现智能分析预警。',
+  },
+  {
+    icon: <Layers size={28} />,
+    title: '数字孪生平台',
+    desc: '全场景三维可视化管理，建立巡检数据全生命周期闭环体系。',
   },
 ];
 
@@ -69,7 +80,7 @@ export default function About() {
               <div className="relative overflow-hidden rounded-2xl shadow-xl">
                 <img
                   src={aboutImg}
-                  alt="科研实验室"
+                  alt="祥云圣火"
                   className="w-full h-full object-cover aspect-[4/3] lg:aspect-auto lg:h-[500px]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a365d]/30 to-transparent" />
@@ -79,8 +90,11 @@ export default function About() {
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-6">
                   关于<span className="text-[#1a365d]">祥云圣火</span>
                 </h2>
+                <p className="text-gray-600 leading-relaxed text-base md:text-lg mb-6">
+                  北京祥云圣火航空科技有限公司是一家专注于低空经济领域的智能无人系统解决方案提供商。致力于推动无人机、机器人、人工智能、大数据及数字化技术深度融合，构建覆盖"空中—地面—云端"的智能无人系统生态体系。
+                </p>
                 <p className="text-gray-600 leading-relaxed text-base md:text-lg">
-                  北京祥云圣火航空科技有限公司是一家专注于低空安全领域的国家级战略高新技术企业。公司深耕无人机反制、低空目标管控及智能安防技术研发，深度融合产学研资源，构建起"探测-识别-反制"一体化技术体系。汇聚电磁对抗、智能感知领域专家，持续突破反制技术瓶颈，产品覆盖军民融合、公共安全等多领域，助力客户应对黑飞、违规飞行等安全挑战。
+                  公司围绕国家低空经济发展战略，以无人机、机器人、多传感器融合感知、自主导航及数字化管理平台技术为核心，推动传统巡检、巡查、安防、运维等行业向无人化、智能化和数字化方向升级。
                 </p>
               </div>
             </div>
@@ -91,18 +105,18 @@ export default function About() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">使命与愿景</h2>
-              <p className="text-gray-500 max-w-2xl mx-auto">以科技守护空域安全，用创新赋能智慧防控</p>
+              <p className="text-gray-500 max-w-2xl mx-auto">以智能无人系统赋能产业升级，让人工智能服务实体经济</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-t-4 border-transparent hover:border-red-500">
                 <span className="text-xs font-bold tracking-[0.2em] text-gray-400">MISSION</span>
                 <h3 className="text-xl font-bold text-gray-900 mt-2 mb-4">企业使命</h3>
-                <p className="text-gray-600 leading-relaxed text-sm">守护空域安全，赋能智慧防控。以自主创新为驱动，持续推动低空安全防护体系的智能化升级。</p>
+                <p className="text-gray-600 leading-relaxed text-sm">以智能无人系统赋能产业升级，让人工智能服务实体经济。</p>
               </div>
               <div className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-t-4 border-transparent hover:border-[#1a365d]">
                 <span className="text-xs font-bold tracking-[0.2em] text-gray-400">VISION</span>
                 <h3 className="text-xl font-bold text-gray-900 mt-2 mb-4">企业愿景</h3>
-                <p className="text-gray-600 leading-relaxed text-sm">成为国内领先的低空安全科技企业，打造覆盖智慧巡检、反制管控、国防应急等领域的行业级生态平台。</p>
+                <p className="text-gray-600 leading-relaxed text-sm">成为国内领先的低空经济智能无人系统科技企业，打造覆盖智慧巡检、智慧安防、应急救援等领域的行业级无人系统生态平台。</p>
               </div>
               <div className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-t-4 border-transparent hover:border-red-500">
                 <span className="text-xs font-bold tracking-[0.2em] text-gray-400">VALUE</span>
@@ -113,33 +127,27 @@ export default function About() {
           </div>
         </section>
 
-        <section className="py-20 md:py-28">
+        <section className="py-20 md:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">发展历程</h2>
-              <p className="text-gray-500">从创立到行业引领，每一步都是对低空安全的坚定承诺</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">空地协同智能巡检平台</h2>
+              <p className="text-gray-500 max-w-3xl mx-auto">
+                融合无人机、无人车、AI、自主导航及数字化管理平台等核心技术，构建"空中巡查 + 地面巡检 + 云端管理"的三位一体作业体系
+              </p>
             </div>
-            <div className="relative max-w-3xl mx-auto">
-              <div className="absolute left-[19px] md:left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 -translate-x-1/2" />
-              {milestones.map((item, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {productTiers.map((tier) => (
                 <div
-                  key={item.year}
-                  className={`relative flex flex-col md:flex-row items-start gap-6 pb-16 last:pb-0 ${
-                    index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                  }`}
+                  key={tier.title}
+                  className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1"
                 >
-                  <div className="hidden md:block md:w-1/2" />
-                  <div className="absolute left-0 md:left-1/2 top-0 w-[38px] h-[38px] -translate-x-[19px] md:-translate-x-[19px] flex items-center justify-center">
-                    <div className="w-[38px] h-[38px] rounded-full bg-red-600 border-4 border-white shadow-md flex items-center justify-center">
-                      <div className="w-2 h-2 rounded-full bg-white" />
+                  <div className={`bg-gradient-to-br ${tier.color} p-8 text-center`}>
+                    <div className="w-16 h-16 mx-auto mb-5 rounded-full bg-white/20 flex items-center justify-center text-white group-hover:bg-white/30 transition-colors duration-300">
+                      {tier.icon}
                     </div>
-                  </div>
-                  <div className={`pl-14 md:pl-0 md:w-1/2 ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12'}`}>
-                    <span className="inline-block px-3 py-1 bg-red-50 text-red-600 text-sm font-bold rounded-full mb-3">
-                      {item.year}
-                    </span>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
-                    <p className="text-gray-500 text-sm leading-relaxed">{item.description}</p>
+                    <h3 className="text-xl font-bold text-white mb-1">{tier.title}</h3>
+                    <p className="text-white/70 text-sm mb-4">{tier.subtitle}</p>
+                    <p className="text-white/80 text-sm leading-relaxed">{tier.desc}</p>
                   </div>
                 </div>
               ))}
@@ -150,20 +158,20 @@ export default function About() {
         <section className="py-20 bg-[#1a365d]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">核心优势</h2>
-              <p className="text-blue-200 max-w-2xl mx-auto">低空安全 · 空地协同 · 全流程技术服务</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">核心技术壁垒</h2>
+              <p className="text-blue-200 max-w-2xl mx-auto">自主导航 · 多源融合 · AI视觉 · 数字孪生</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {coreFeatures.map((item) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              {techCards.map((card) => (
                 <div
-                  key={item.title}
+                  key={card.title}
                   className="group bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 border border-white/10 hover:border-red-500/50"
                 >
-                  <div className="w-20 h-20 mx-auto mb-6 rounded-full border-2 border-red-500/60 flex items-center justify-center text-red-400 group-hover:bg-red-500 group-hover:text-white transition-all duration-300">
-                    {item.icon}
+                  <div className="w-16 h-16 mx-auto mb-5 rounded-full border-2 border-red-500/60 flex items-center justify-center text-red-400 group-hover:bg-red-500 group-hover:text-white transition-all duration-300">
+                    {card.icon}
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-red-400 transition-colors duration-300">{item.title}</h3>
-                  <p className="text-blue-200 text-sm leading-relaxed">{item.desc}</p>
+                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-red-400 transition-colors duration-300">{card.title}</h3>
+                  <p className="text-blue-200 text-sm leading-relaxed">{card.desc}</p>
                 </div>
               ))}
             </div>
