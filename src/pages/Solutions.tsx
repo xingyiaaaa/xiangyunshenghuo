@@ -192,7 +192,7 @@ export default function Solutions() {
           </div>
         </section>
 
-        <section className="py-20 bg-gray-50">
+        <section className="pt-20 pb-28 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -262,33 +262,7 @@ export default function Solutions() {
           </div>
         </section>
 
-        <section className="py-16 bg-[#1a365d]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-              <div className="text-center md:text-left">
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
-                  需要量身定制智能空地协同巡检方案？
-                </h3>
-                <p className="text-blue-200">
-                  我们的专业团队将为您提供一对一的解决方案咨询服务
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="/contact"
-                  className={cn(
-                    'px-8 py-4 bg-red-600 text-white rounded-lg',
-                    'font-bold text-lg',
-                    'hover:bg-red-700 hover:scale-105',
-                    'transition-all duration-300 shadow-lg hover:shadow-xl'
-                  )}
-                >
-                  联系我们 / 获取方案
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+
       </main>
       <ContactFloat />
       <Footer />
