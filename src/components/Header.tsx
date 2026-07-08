@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import logoImg from '../../picture/logo.png';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,13 +45,12 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <img src="/logo.png" alt="祥云圣火" className="h-10 w-auto" />
-            <div className="ml-2">
-              <h1 className="text-lg font-bold text-gray-800">祥云圣火</h1>
-              <p className="text-xs text-gray-500">XIANGYUN SHENGHUO</p>
-            </div>
-          </div>
+          <a href="/" className="flex items-center gap-2.5">
+            <img src={logoImg} alt="祥云圣火" className="h-9 w-9 object-contain" />
+            <span className="text-xl font-bold" style={{ color: '#1a365d', fontFamily: '"PingFang SC","Microsoft YaHei",sans-serif' }}>
+              祥云圣火
+            </span>
+          </a>
 
           <nav className="hidden md:flex items-center space-x-2">
             {navItems.map((item) =>
