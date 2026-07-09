@@ -7,12 +7,12 @@ export default function Footer() {
             <p>
               网站：
               <a
-                href="https://xiangyunshenghuo.vercel.app"
+                href="https://vigorx.asia"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-300 hover:text-red-400 transition-colors"
               >
-                xiangyunshenghuo.vercel.app
+                vigorx.asia
               </a>
             </p>
             <p>地址：北京市石景山区金安中海财富中心</p>
